@@ -8,7 +8,7 @@ GITHUB_TOKEN = credentials('GAT')
 stages {
 stage('Checkout') {
 steps {
-git credentialsId: 'GITHUB_TOKEN', url: 'https://github.com/urstrulyManoj1/jenkins/'
+git credentialsId: 'GITHUB_TOKEN', branch: 'test' url: 'https://github.com/urstrulyManoj1/jenkins/'
 }
 }
 stage('Build'){
