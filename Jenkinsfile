@@ -8,17 +8,20 @@ GITHUB_TOKEN = credentials('GAT')
 stages {
 stage('Checkout') {
 steps {
-git credentialsId: 'GITHUB_TOKEN', branch: 'main', url: 'https://github.com/urstrulyManoj1/jenkins/'
+git credentialsId: 'GITHUB_TOKEN',branch: 'features', url: 'https://github.com/urstrulyManoj1/jenkins/'
 }
 }
-stage('Build'){
+stage('Build and run'){
 steps{
 sh 'javac F.java'
-}
-}
-stage('Run'){
-steps{
 sh 'java F'
+}
+}
+stage('Docker Stage'){
+steps{
+script{
+def dockerImage = docker.build('hw:latest', '-f Dockerfile .')
+}
 }
 }
 // Add more stages as needed
