@@ -13,6 +13,5 @@ COPY F.java .
 # Compile the Java program
 RUN javac F.java
 
-
 # Run the Java program when the container starts
 CMD ["java", "F"]
