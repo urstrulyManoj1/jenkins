@@ -25,7 +25,6 @@ def dockerImage = docker.build('hw:latest', '-f Dockerfile .')
 }
 }
 // Add more stages as needed
-  stages {
         stage('AWS Login') {
             steps {
                 script {
@@ -35,8 +34,8 @@ def dockerImage = docker.build('hw:latest', '-f Dockerfile .')
                 }
             }
         }
-    }
 }
+
 triggers {
 // Trigger the pipeline when changes are pushed to the GitHub repository
 githubPush()
