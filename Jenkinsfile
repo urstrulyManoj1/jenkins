@@ -29,7 +29,7 @@ def dockerImage = docker.build('hw:latest', '-f Dockerfile .')
         stage('AWS Login') {
             steps {
                 script {
-                    withCredentials([aws(credentials: 'xxxxxxxxxx', region: 'us-west-2')]) {
+                    withCredentials([aws(credentials: '637423225472', region: 'us-west-2')]) {
                         sh 'aws sts get-caller-identity'
                     }
                 }
