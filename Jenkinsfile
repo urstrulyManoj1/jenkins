@@ -20,7 +20,7 @@ sh 'java F'
 stage('Docker Stage'){
 steps{
 script{
-dockerImage = docker.build('hw:latest', '-f Dockerfile .')
+def dockerImage = docker.build('hw:latest', '-f Dockerfile .')
 }
 }
 }
