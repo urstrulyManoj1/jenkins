@@ -40,7 +40,7 @@ def dockerImage = docker.build('hw:latest', '-f Dockerfile .')
                     $class: 'AmazonWebServicesCredentialsBinding',
                     accessKeyVariable: 'AWS_ACCESS_KEY_ID',
                     secretKeyVariable: 'AWS_SECRET_ACCESS_KEY',
-                    credentialsId: 'YOUR_ACCESS_KEY_ID_CREDENTIAL_ID'
+                    credentialsId: 'aws-cred'
                 ]]) {
                     // Execute AWS CLI command to verify login
                     sh 'aws sts get-caller-identity'
