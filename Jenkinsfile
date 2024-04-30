@@ -3,7 +3,6 @@ agent any
 
 environment {
 GITHUB_TOKEN = credentials('GAT')
-Access_key = credentials(
 }
 
 stages {
