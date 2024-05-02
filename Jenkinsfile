@@ -48,6 +48,10 @@ def dockerImage = docker.build('hw:latest', '-f Dockerfile .')
             }
         }
 
+stage('pushing image to ecr'){
+steps{
+sh 'docker tag hw:latest 060570890627.dkr.ecr.us-west-2.amazonaws.com/reposm/reposm'
+sh 'docker push 060570890627.dkr.ecr.us-west-2.amazonaws.com/reposm'
         
 }
 
