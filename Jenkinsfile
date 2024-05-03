@@ -2,7 +2,7 @@ pipeline {
 agent any
 
 environment {
-GITHUB_TOKEN = credentials('GAT')
+GITHUB_TOKEN = credentials('GAT1')
 }
 
 stages {
