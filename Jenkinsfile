@@ -22,7 +22,7 @@ sh 'java F'
         
 stage('Docker Stage'){
 steps{
-
+sh 'docker login'
 sh 'docker build -t hw:latest -f Dockerfile .'
 
 }
