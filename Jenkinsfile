@@ -22,9 +22,9 @@ sh 'java F'
         
 stage('Docker Stage'){
 steps{
-script{
-def dockerImage = docker.build('hw:latest', '-f Dockerfile .')
-}
+
+sh 'docker build -t hw:latest -f Dockerfile .'
+
 }
 }
         
