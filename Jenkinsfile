@@ -51,8 +51,8 @@ def dockerImage = docker.build('hw:latest', '-f Dockerfile .')
 stage('pushing image to ecr'){
 steps{
 sh 'aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 060570890627.dkr.ecr.us-west-2.amazonaws.com'
-sh 'docker tag hw 060570890627.dkr.ecr.us-west-2.amazonaws.com/reposm'
-sh 'docker push 060570890627.dkr.ecr.us-west-2.amazonaws.com/reposm'
+sh 'docker tag hw 060570890627.dkr.ecr.us-west-2.amazonaws.com/hw'
+sh 'docker push 060570890627.dkr.ecr.us-west-2.amazonaws.com/hw'
 }
 }
         
