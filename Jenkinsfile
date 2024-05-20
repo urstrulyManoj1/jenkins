@@ -55,7 +55,8 @@ sh 'docker tag hw 060570890627.dkr.ecr.us-west-2.amazonaws.com/hw'
 sh 'docker push 060570890627.dkr.ecr.us-west-2.amazonaws.com/hw'
 }
 }
-        
+
+
 }
 
 triggers {
