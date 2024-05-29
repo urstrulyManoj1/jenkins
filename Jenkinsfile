@@ -5,21 +5,7 @@ environment {
 GITHUB_TOKEN = credentials('GAT')
 }
 
-stages {
-        
-stage('Checkout') {
-steps {
-git credentialsId: 'GITHUB_TOKEN',branch: 'features', url: 'https://github.com/urstrulyManoj1/jenkins/'
-}
-}
-        
-stage('Build and run'){
-steps{
-sh 'javac F.java'
-sh 'java F'
-}
-}
-        
+stages {        
 stage('Docker Stage'){
 steps{
 sh 'docker build -t hw:latest -f Dockerfile .'
